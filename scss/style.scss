@@ -328,6 +328,9 @@ ul {
     transform: translateY(-50%);
     border: none;
 }
+.accordion__button_active {
+    transform: rotate(180deg);
+}
 .accordion__button:focus {
     outline: none;
 }
