@@ -4,14 +4,29 @@ $(document).ready(function(){
         $('.burger').toggleClass('burger_active');     
         $('.body').toggleClass('body_lock');     
     });
-    $('.description_slider').slick({
+    $('.review-slider').slick({
+        vertical: true,
+        verticalSwiping: true,
+        slidesToShow: 2,
+        prevArrow: '<button class="review-slider__button review-slider__button_up"></button>',
+        nextArrow: '<button class="review-slider__button review-slider__button_down"></button>',
+        slidesToScroll: 2,
         responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                    prevArrow: '<button class="review-slider__button review-slider__button_up"></button>',
+                    nextArrow: '<button class="review-slider__button review-slider__button_down"></button>',
+                    slidesToScroll: 2
+                }
+            },
             {
                 breakpoint: 575,
                 settings: {
                     slidesToShow: 1,
-                    prevArrow: '<button class="button team-slider__button team-slider__button_left"></button>',
-                    nextArrow: '<button class="button team-slider__button team-slider__button_right"></button>',
+                    prevArrow: '<button class="review-slider__button review-slider__button_up"></button>',
+                    nextArrow: '<button class="review-slider__button review-slider__button_down"></button>',
                     slidesToScroll: 1
                 }
             }
@@ -37,6 +52,30 @@ function openAccordion() {
 
 openAccordion();
 
+function runTeamSlider() {
+    let screenWidth = screen.width;
+    if (screenWidth < 576) {
+        $(document).ready(function(){    
+            $('.team-slider').slick({
+                infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 575,
+                        settings: {
+                            slidesToShow: 1,
+                            prevArrow: '<button class="button team-slider__button team-slider__button_left"></button>',
+                            nextArrow: '<button class="button team-slider__button team-slider__button_right"></button>',
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        })
+    } else {
+        showTeamMember();
+    }
+}
+
 function showTeamMember () { 
     let teamSliderItems = document.querySelectorAll('.team-slider__item');
     let teamSliderPhotos = document.querySelectorAll('.team-slider__photo');
@@ -50,5 +89,4 @@ function showTeamMember () {
     }
 }
 
-showTeamMember();
-
+runTeamSlider();
