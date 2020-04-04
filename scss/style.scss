@@ -117,6 +117,7 @@ ul {
     font-family: $raleway;
     font-weight: 600;
     font-size: 1.5rem;
+    transition: all .3s linear;
 }
 .menu__link_header:hover {
     color: $navy;
@@ -132,6 +133,7 @@ ul {
     border: 0.1rem solid #fff;
     border-radius: .2rem;
     box-shadow: none;
+    transition: all .3s linear;
 }
 .button_header:hover {
     color: #0bb6bd;
