@@ -24,13 +24,13 @@ function openAccordion() {
 
 openAccordion();
 
-/* function showTeamMember () { 
+function showTeamMember () { 
     let teamSliderItems = document.querySelectorAll('.team-slider__item');
     let teamSliderPhotos = document.querySelectorAll('.team-slider__photo');
 
     for (let i = 0; i < teamSliderItems.length; i++) {
-        let currentItem = document.querySelector('.team-slider__item_active');
         teamSliderPhotos[i].addEventListener('click', () => {
+            let currentItem = document.querySelector('.team-slider__item_active');
             teamSliderItems[i].classList.toggle('team-slider__item_active');
             currentItem.classList.toggle('team-slider__item_active');
         });
@@ -38,4 +38,3 @@ openAccordion();
 }
 
 showTeamMember();
- */

@@ -432,11 +432,12 @@ ul {
 
 
 .team_content {
+    position: relative;
     margin: 12rem auto 0;
     width: 65rem;
 }
 .team-slider {
-    position: relative;
+    padding-bottom: 13rem;
     margin: 0 auto;
     width: 46rem;
     display: flex;
@@ -466,8 +467,12 @@ ul {
     cursor: pointer;
 }
 .item__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     display: none;
-    margin: -1.5rem -110% 0;
+    margin: -1.5rem 0 0;
     font-family: $raleway;
     text-align: center;
 }
