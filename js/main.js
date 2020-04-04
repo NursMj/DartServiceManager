@@ -4,6 +4,19 @@ $(document).ready(function(){
         $('.burger').toggleClass('burger_active');     
         $('.body').toggleClass('body_lock');     
     });
+    $('.description_slider').slick({
+        responsive: [
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    prevArrow: '<button class="button team-slider__button team-slider__button_left"></button>',
+                    nextArrow: '<button class="button team-slider__button team-slider__button_right"></button>',
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
 })
 
 function openAccordion() {
@@ -38,3 +51,4 @@ function showTeamMember () {
 }
 
 showTeamMember();
+
